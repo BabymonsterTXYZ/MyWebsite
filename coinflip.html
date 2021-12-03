@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<style>
+    body{
+        font-family: Rubik;
+        color: white;
+        background-image: url(https://miro.medium.com/max/700/1*veW_bUCkcsHZ32GMCVhyLA.png);
+        background-size: cover;
+    }
+    #click{
+        border-width: 4px;
+        border-radius: 25px;
+        width: 100px;
+        height: 50px;
+        font-family: Rubik;
+        font-weight: bold;
+        color: gold;
+        background-color: #000000;
+    }
+
+</style>
+
+<body>
+    <center><img src="./s-removebg-preview.png" width="200px" height="200px"></center>
+    <br>
+    <br>
+    <center><button id="click">CLICK ME</button></center>
+    <p><b><center><br><br>You Got : <span id="result"></span><br><br>You Got Head : <span id="heads"></span><br><br>You Got Tails : <span
+        id="tails"></span></center></b></p>
+    <br><br><br><br><br>
+    <h1><a href="Homepage.html">Home</a></h1>
+</body>
+<script>
+    document.getElementById('click').onclick = click;
+
+    var heads = 0;
+    var tails = 0;
+
+    function click() {
+        x = (Math.floor(Math.random() * 2) == 0);
+        if (x == true) {
+            document.getElementById('result').innerHTML = "Head";
+            heads = heads + 1;
+        } else {
+            document.getElementById('result').innerHTML = "Tails";
+            tails = tails + 1;
+        }
+        document.getElementById('heads').innerHTML = heads;
+        document.getElementById('tails').innerHTML = tails;
+
+    };
+</script>
+</html>
